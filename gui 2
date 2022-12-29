@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Dark Legends Gui 2", "Synapse")
+
+--Tab 1
+
+local Tab = Window:NewTab("Mystic script")
+local Section = Tab:NewSection("Best Ones")
+
+
+Section:NewButton("TheMysticDiaries", "loads the script", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/TheMysticDiaries'),true))()
+end)
+
+--Tab 2
+
+local Tab = Window:NewTab("LuckyBlock")
+local Section = Tab:NewSection("best Ones")
+
+Section:NewButton("LuckyBlock", "loads the script", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/JbWJ7R7i", true))()
+end)
