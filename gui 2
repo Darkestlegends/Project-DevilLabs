@@ -19,3 +19,15 @@ local Section = Tab:NewSection("best Ones")
 Section:NewButton("LuckyBlock", "loads the script", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/JbWJ7R7i", true))()
 end)
+
+--Tab 3
+
+local Tab = Window:NewTab("bloxfruit scripts")
+local Section = Tab:NewSection("best Ones")
+
+Section:NewButton("UltraStuff", "loads the script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
+end)
+
+--Tab 4
+
