@@ -31,3 +31,12 @@ end)
 
 --Tab 4
 
+local Tab = Window:NewTab("Magictrading scripts")
+local Section = Tab:NewSection("best Ones")
+
+Section:NewButton("UltraStuff", "loads the script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FarkleTheWise/Magic-Trainer/main/WeezardHack_v2.lua"))()
+end)
+
+--Tab 5
+
