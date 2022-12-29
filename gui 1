@@ -36,11 +36,13 @@ end)
 local Tab = Window:NewTab("Combat warrior scripts")
 local Section = Tab:NewSection("best Ones")
 
-
 Section:NewButton("projecthook", "loads the script", function()
 loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
 end)
 
+Section:NewButton("frkfx", "loads the script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))();
+end)
 --Tab 4
 
 local Tab = Window:NewTab("Random Good Guis")
@@ -101,6 +103,15 @@ end)
 
 --Tab 9
 
+local Tab = Window:NewTab("My second UI")
+local Section = Tab:NewSection("best Ones")
+
+Section:NewButton("UI 2", "loads my other gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/29631fb19acb839b6f1eb3826e481ff34c2a3420/gui%202",true))();
+end)
+
+--Tab 10
+
 local Tab = Window:NewTab("ToggleUI")
 local Section = Tab:NewSection("best Ones")
 
@@ -108,11 +119,4 @@ Section:NewKeybind("ToggleUI", "ToggleUI", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
---Tab 10
-
-local Tab = Window:NewTab("My second UI")
-local Section = Tab:NewSection("best Ones")
-
-Section:NewButton("UI 2", "loads my other gui", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/main/gui%202",true))();
-end)
+--End Of Tabs For This Page
