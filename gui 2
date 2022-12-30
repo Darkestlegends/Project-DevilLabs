@@ -31,12 +31,11 @@ end)
 
 --Tab 4
 
-local Tab = Window:NewTab("Magictrading scripts")
+local Tab = Window:NewTab("Magic training scripts")
 local Section = Tab:NewSection("best Ones")
 
-Section:NewButton("UltraStuff", "loads the script", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FarkleTheWise/Magic-Trainer/main/WeezardHack_v2.lua"))()
+Section:NewButton("Mystern", "loads the script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Incessal/Mystern/main/script.lua"))();
 end)
 
 --Tab 5
-
