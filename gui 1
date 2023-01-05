@@ -45,7 +45,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors
 end)
 --Tab 4
 
-local Tab = Window:NewTab("Random Good Guis")
+local Tab = Window:NewTab("Op Guis")
 local Section = Tab:NewSection("best Ones")
 
 Section:NewButton("V.G Hub", "loads the script", function()
@@ -58,6 +58,10 @@ end)
 
 Section:NewButton("Ikhub", "loads the script", function()
 loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+end)
+
+Section:NewButton("unfairHub", "loads the script", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
 end)
 
 --Tab 5
