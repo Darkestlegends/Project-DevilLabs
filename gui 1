@@ -56,6 +56,10 @@ Section:NewButton("NukeVsCity", "loads the script", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
 end)
 
+Section:NewButton("Ikhub", "loads the script", function()
+loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+end)
+
 --Tab 5
 
 local Tab = Window:NewTab("Doors script")
@@ -107,7 +111,7 @@ local Tab = Window:NewTab("My second UI")
 local Section = Tab:NewSection("best Ones")
 
 Section:NewButton("UI 2", "loads my other gui", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/29631fb19acb839b6f1eb3826e481ff34c2a3420/gui%202",true))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/main/gui%202"))();
 end)
 
 --Tab 10
