@@ -1,0 +1,474 @@
+-- Made by Matsu for Wizard Tycoon 2 Player
+
+--[[
+
+              ~WIZARD MAN~
+
+This script can make your game laggy. 
+Highly recommended use fps unlocker cuz power of this script equals to ur fps :/.
+
+Controls:
+
+  Dodging:
+      Q - Dash (Moves the character forward, Can be controlled, Damage: 10 for every bullet)
+    
+  Protection:
+      F - Force Field (Can be used only when character spawned)
+
+  Attacking:
+      G - Gatling (Holdable, Damage: 1)
+      V - Leech (Holdable, Damge on every player: 0.05) 
+      C - Snipe (Single Click, CD: 5 sec, Damage: 100)
+      E - Shot Gun (Single Click, CD: 5 sec, Damage: 3 for every bullet)
+      T - Six Path (Holdable, Damage per tick: 0,25 + Splash damage: 0,25)
+      R - Splash Bullet (Single Click, CD: 50 sec, Damage: 50 for every bullet)
+
+  Buffs:
+      B - Adrenaline (Single Click, Duration: 20 sec, CD: 60 sec, x2 multiplier damage on all moves, low CD on moves, buffs speed and jump power, if u take damage u will die, if u not full health then u will die)
+     
+  Other:
+      K - Increases hitbox of gatling by 5
+      J - Reduces hitbox of gatling by 5
+
+]]--
+
+-- Note1: I made it balanced but you can change the settings
+-- Note2: Sorry for my bad english :c
+
+local fps60 = false -- Change to true if your fps smaller or equals to 60
+local plrs = game:GetService('Players')
+local plr = plrs.LocalPlayer
+local CAS = game:GetService('ContextActionService')
+local size = 5 -- Size of the gatling
+local mouse = plr:GetMouse()
+local enabler1 = false
+local enabler2 = false
+local shoot = false
+local shoot1 = false
+local shoot2 = false
+local dash1 = false
+local damage = 0.2 -- Damage of leech
+local damage1 = 20 -- Damage of gatling
+local damage2 = 10 -- Damage of aura
+local damage3 = 400 --Damage of snipe shot
+local damage4 = 20 -- Damage of shot gun
+local damage6 = 30 -- Damage of six path
+local damage7 = 30 -- Damage of six path's splash
+local damage8 = 50 -- Damage of splash bullet
+local speed = 100 -- Speed of splash bullet
+local range = 120 -- Range of splash bullet
+local CD = 2 -- CD of snipe shot
+local CD1 = 1 -- CD of splash bullet
+local CD3 = 3 -- CD of adrenaline
+local CD4 = 1 -- CD of shot gun
+local CD5 = 1 -- CD of dash
+local duration = 10000 -- Duration of strong mod
+local speed1 = 35 -- Move speed when using aura
+local jump = 70 -- Jump power when using aura
+local dashspeed = 1 -- Speed of dash
+local speed3 = 40
+local range3 = 40
+local OldHealth = plr.Character.Humanoid.Health
+
+if fps60 == true then
+    dashspeed = 4
+end
+
+function holdAll(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        game.StarterGui:SetCore('SendNotification', {
+            Title = 'Leech!';
+            Text = ''
+        })
+        Event = game.RunService.Stepped:Connect(function()
+            for i,v in pairs(plrs:GetPlayers()) do
+                if v.Character then
+                    if v.Character:FindFirstChild('HumanoidRootPart') ~= nil then
+                        for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                            v.Parent = plr.Character
+                        end
+                        plr.Character.Wand.Fire:FireServer(v.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,0), math.huge, 1, game.Players.LocalPlayer.Character.Wand, damage, game.Players.LocalPlayer.Character)
+                    end
+                end
+            end
+        end)
+    end
+    if inputState == Enum.UserInputState.End then
+        Event:Disconnect()
+    end
+end
+
+function forceField(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if plr.Character:FindFirstChild('RemoveFF') ~= nil then
+            game.StarterGui:SetCore('SendNotification', {
+                Title = 'No One Can Touch You!!';
+                Text = ''
+            })
+            plr.Character.RemoveFF:Destroy()
+        end
+    end
+end
+
+function addSize(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        size = size + 5
+        game.StarterGui:SetCore('SendNotification', {
+            Title = 'Gatling Size:'..size;
+            Text = ''
+        })
+    end
+end
+
+function removeSize(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if size >= 5 then
+            size = size - 5
+            game.StarterGui:SetCore('SendNotification', {
+                Title = 'Gatling Size:'..size;
+                Text = ''
+            })
+        end
+    end
+end
+
+function holdAction(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        game.StarterGui:SetCore('SendNotification', {
+            Title = 'Gatling!';
+            Text = ''
+        })
+        Event1 = game.RunService.Stepped:Connect(function()
+            for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                v.Parent = plr.Character
+            end
+            plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position,mouse.Hit.Position) + Vector3.new(math.random(-size,size),math.random(-2,size),math.random(-size,size)), 800, math.huge, game.Players.LocalPlayer.Character.Wand, damage1, game.Players.LocalPlayer.Character)
+        end)
+    end
+    if inputState == Enum.UserInputState.End then
+        Event1:Disconnect()
+    end
+end
+
+function adrenaline(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if enabler1 == false then
+            game.StarterGui:SetCore('SendNotification', {
+                Title = 'Your Rage Is Unstoppable!';
+                Text = ''
+            })
+            damage = damage * 2
+            damage1 = damage1 * 2
+            damage3 = damage3 * 2
+            damage4 = damage4 * 2
+            damage6 = damage6 * 2
+            damage7 = damage7 * 2
+            damage8 = damage8 * 2
+            CD = 0.1
+            CD1 = 0.1
+            CD4 = 0.1
+            CD5 = 0.1
+            Event2 = game.RunService.Stepped:Connect(function()
+                for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                    v.Parent = plr.Character
+                end
+                plr.Character.Humanoid.WalkSpeed = speed1
+                plr.Character.Humanoid.JumpPower = jump
+                plr.Character.Wand.Fire:FireServer((plr.Character.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(math.random(50,140)), math.rad(math.random(-50,50)), math.rad(0)) + Vector3.new(math.random(-5, 5),math.random(-5, 5),math.random(-5, 5))), 50, 0.2, game.Players.LocalPlayer.Character.Wand, damage2, game.Players.LocalPlayer.Character)
+            end)
+            enabler1 = true
+                plr.Character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+                    if enabler2 == false and enabler1 == true then
+                        print("damage taken")
+                        enabler2 = true
+                        plr.Character.Humanoid.Health = 0
+                        game.StarterGui:SetCore('SendNotification', {
+                            Title = 'Your Rage Has Been Stopped!';
+                            Text = ''
+                        })
+                        damage = 0.05
+                        damage1 = 1 
+                        damage3 = 100
+                        damage4 = 3
+                        damage6 = 0.25
+                        damage7 = 0.25
+                        damage8 = 50
+                        CD = 5
+                        CD1 = 3
+                        CD4 = 5
+                        CD5 = 1
+                        Event2:Disconnect()
+                        plr.Character.Humanoid.WalkSpeed = 16
+                        plr.Character.Humanoid.JumpPower = 50
+                    end
+                end)
+
+            wait(duration)
+
+            if enabler2 == false and enabler1 == true then
+                game.StarterGui:SetCore('SendNotification', {
+                    Title = 'Adrenaline ended!';
+                    Text = ''
+                })
+                damage = 0.05
+                damage1 = 1 
+                damage3 = 100
+                damage4 = 3
+                damage6 = 0.25
+                damage7 = 0.25
+                damage8 = 50
+                CD = 5
+                CD1 = 50
+                CD4 = 5
+                CD5 = 1
+                Event2:Disconnect()
+                plr.Character.Humanoid.WalkSpeed = 16
+                plr.Character.Humanoid.JumpPower = 50
+                enabler2 = true
+            end
+            wait(CD3)
+            game.StarterGui:SetCore('SendNotification', {
+                Title = 'Your Anger Grows...';
+                Text = ''
+            })
+            enabler1 = false
+            enabler2 = false
+        end
+    end
+end
+
+function snipeShot(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if shoot == false then
+            for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                v.Parent = plr.Character
+            end
+            game.StarterGui:SetCore('SendNotification', {
+                Title = 'Snipe!';
+                Text = ''
+            })
+            shoot = true
+            plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position), 1000, math.huge, game.Players.LocalPlayer.Character.Wand, damage3, game.Players.LocalPlayer.Character)
+            wait(CD)
+            shoot = false
+        end
+    end
+end
+
+function shotGun(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if shoot2 == false then
+            shoot2 = true
+            game.StarterGui:SetCore('SendNotification', {
+                    Title = 'Shot gun!';
+                    Text = ''
+            })
+            for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                v.Parent = plr.Character
+            end
+            local range1 = 1
+            Event31 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position) * CFrame.Angles(math.rad(math.random(0,10)), math.rad(math.random(0,10)), math.rad(0)), 200, range1, game.Players.LocalPlayer.Character.Wand, damage4, game.Players.LocalPlayer.Character)
+            end)
+            Event32 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position) * CFrame.Angles(math.rad(math.random(0,10)), math.rad(math.random(0,10)), math.rad(0)), 200, range1, game.Players.LocalPlayer.Character.Wand, damage4, game.Players.LocalPlayer.Character)
+            end)
+            Event33 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position) * CFrame.Angles(math.rad(math.random(0,10)), math.rad(math.random(0,10)), math.rad(0)), 200, range1, game.Players.LocalPlayer.Character.Wand, damage4, game.Players.LocalPlayer.Character)
+            end)
+            Event34 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position) * CFrame.Angles(math.rad(math.random(0,10)), math.rad(math.random(0,10)), math.rad(0)), 200, range1, game.Players.LocalPlayer.Character.Wand, damage4, game.Players.LocalPlayer.Character)
+            end)
+            Event35 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position) * CFrame.Angles(math.rad(math.random(0,10)), math.rad(math.random(0,10)), math.rad(0)), 200, range1, game.Players.LocalPlayer.Character.Wand, damage4, game.Players.LocalPlayer.Character)
+            end)
+            wait(0.2)
+            Event31:Disconnect()
+            Event32:Disconnect()
+            Event33:Disconnect()
+            Event34:Disconnect()
+            Event35:Disconnect()
+            wait(CD4)
+            shoot2 = false
+        end
+    end
+end
+
+function sixPath(_, inputState, _)
+    if inputState == Enum.UserInputState.Begin then
+        game.StarterGui:SetCore('SendNotification', {
+                Title = 'Six path!';
+                Text = ''
+        })
+        Event4 = game.RunService.Stepped:Connect(function()
+            for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                v.Parent = plr.Character
+            end
+            TheTable1 = {16,-16,14,-14,0,20,-20}
+            TheTable2 = {-1,14,20,6}
+
+            local RandomAtTable1 = TheTable1[math.random(#TheTable1)]
+            local RandomAtTable2 = TheTable2[math.random(#TheTable2)]
+
+            plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position + Vector3.new(RandomAtTable1,RandomAtTable2,0), mouse.Hit.Position), 800, math.huge, game.Players.LocalPlayer.Character.Wand, damage6, game.Players.LocalPlayer.Character)
+        end)
+        Event2Explosion = game.RunService.Stepped:Connect(function()
+            plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), 400, 0.1, game.Players.LocalPlayer.Character.Wand, damage7, game.Players.LocalPlayer.Character)
+        end)
+    end
+    if inputState == Enum.UserInputState.End then
+        Event4:Disconnect()
+        Event2Explosion:Disconnect()
+    end
+end 
+
+function bulletExplosion(_, inputState, _)
+    if inputState == Enum.UserInputState.Begin then
+        if shoot1 == false then
+            shoot1 = true
+            for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                v.Parent = plr.Character
+            end
+            game.StarterGui:SetCore('SendNotification', {
+                    Title = 'Splash bullet!';
+                    Text = ''
+            })
+            plr.Character.Wand.Fire:FireServer(CFrame.new(plr.Character.HumanoidRootPart.Position, mouse.Hit.Position), 1000, math.huge, game.Players.LocalPlayer.Character.Wand, 10, game.Players.LocalPlayer.Character)
+
+            Event6 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event7 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event8 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event9 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event10 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event11 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event12 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event13 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event14 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event15 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event16 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event17 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event18 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event19 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event20 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event21 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event22 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event23 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event24 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event25 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event26 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event27 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event28 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event29 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            Event30 = game.RunService.Stepped:Connect(function()
+                plr.Character.Wand.Fire:FireServer(CFrame.new(mouse.Hit.Position + Vector3.new(0,0.5,0)) * CFrame.Angles(math.rad(math.random(0,180)), math.rad(math.random(0,360)), math.rad(0)), speed, range, game.Players.LocalPlayer.Character.Wand, damage8, game.Players.LocalPlayer.Character)
+            end)
+            wait(0.01)
+            Event6:Disconnect()
+            Event7:Disconnect()
+            Event8:Disconnect()
+            Event9:Disconnect()
+            Event10:Disconnect()
+            Event11:Disconnect()  
+            Event12:Disconnect()
+            Event13:Disconnect()
+            Event14:Disconnect()
+            Event15:Disconnect()
+            Event16:Disconnect()
+            Event17:Disconnect()
+            Event18:Disconnect()
+            Event19:Disconnect()
+            Event20:Disconnect()
+            Event21:Disconnect()
+            Event22:Disconnect()
+            Event23:Disconnect()  
+            Event24:Disconnect()
+            Event25:Disconnect()
+            Event26:Disconnect()
+            Event27:Disconnect()
+            Event28:Disconnect()
+            Event29:Disconnect()  
+            Event30:Disconnect() 
+            wait(CD1)
+            shoot1 = false
+        end
+    end
+end 
+
+function dash(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        if dash1 == false then
+            dash1 = true
+            Event36 = game.RunService.Stepped:Connect(function()
+                plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-dashspeed)
+                for i,v in pairs{plr.Backpack:FindFirstChild('Wand')} do
+                    v.Parent = plr.Character
+                end
+                plr.Character.Wand.Fire:FireServer(plr.Character.HumanoidRootPart.CFrame + Vector3.new(math.random(-5,5), math.random(-2,5), math.random(-5,5)), 0, 1, game.Players.LocalPlayer.Character.Wand, 10, game.Players.LocalPlayer.Character)
+            end)
+            wait(1)
+            Event36:Disconnect()
+            wait(CD5)
+            dash1 = false
+        end
+    end
+end
+
+CAS:BindAction('holdAction', holdAction, true, Enum.KeyCode.G)
+CAS:BindAction('addSize', addSize, true, Enum.KeyCode.J)
+CAS:BindAction('removeSize', removeSize, true, Enum.KeyCode.H)
+CAS:BindAction('forceField', forceField, true, Enum.KeyCode.F)
+CAS:BindAction('holdAll', holdAll, true, Enum.KeyCode.V)
+CAS:BindAction('snipeShot', snipeShot, true, Enum.KeyCode.C)
+CAS:BindAction('shotGun', shotGun, true, Enum.KeyCode.E)
+CAS:BindAction('sixPath', sixPath, true, Enum.KeyCode.T)
+CAS:BindAction('bulletExplosion', bulletExplosion, true, Enum.KeyCode.R)
+CAS:BindAction('dash', dash, true, Enum.KeyCode.Q)
+CAS:BindAction('adrenaline', adrenaline, true, Enum.KeyCode.B)
