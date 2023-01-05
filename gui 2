@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Dark Legends Gui 2", "Synapse")
+local Window = Library.CreateLib("DrkHub 2", "Synapse")
 
 --Tab 1
 
@@ -43,9 +43,18 @@ end)
 local Tab = Window:NewTab("Wizerd tycoon 2 player")
 local Section = Tab:NewSection("best Ones")
 
-Section:NewButton(" Wizerd Tycoon - 2 Player", "loads the script", function()
+Section:NewButton("Wizerd Tycoon - 2 Player", "loads the script", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/main/edit%20Tycoon%20-%202%20Player%20script"))();
 end)
 
 --Tab 6
+
+local Tab = Window:NewTab("DrkHubr")
+local Section = Tab:NewSection("best Ones")
+
+Section:NewButton("Mystic falls", "loads the script", function()
+https://raw.githubusercontent.com/Tajaewiner/gui/main/mystic%20falls%20script
+end)
+
+--Tab 7
 
