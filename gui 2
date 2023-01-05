@@ -49,12 +49,11 @@ end)
 
 --Tab 6
 
-local Tab = Window:NewTab("DrkHubr")
+local Tab = Window:NewTab("Mystic falls")
 local Section = Tab:NewSection("best Ones")
 
-Section:NewButton("Mystic falls", "loads the script", function()
-https://raw.githubusercontent.com/Tajaewiner/gui/main/mystic%20falls%20script
+Section:NewButton("DrkHub", "loads the script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tajaewiner/gui/main/mystic%20falls%20script"))();
 end)
 
---Tab 7
-
+--Tab 7 
