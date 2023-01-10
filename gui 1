@@ -64,6 +64,10 @@ Section:NewButton("unfairHub", "loads the script", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
 end)
 
+Section:NewButton("tnewmanhub", "loads the script", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+end)
+
 --Tab 5
 
 local Tab = Window:NewTab("Doors script")
