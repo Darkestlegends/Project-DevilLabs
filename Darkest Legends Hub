@@ -1,0 +1,143 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Darkest Legends ScriptHub!", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "Notification content... Welcome to Darkest Legends ScriptHub!!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--Tab 1
+
+local Tab = Window:MakeTab({
+	Name = "Bedwars!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "VapeV4!",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+  	end    
+})
+
+--Tab 2
+
+local Tab = Window:MakeTab({
+	Name = "Combat Warriors!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "projecthook!",
+	Callback = function()
+loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
+  	end    
+})
+
+--Tab 3
+
+local Tab = Window:MakeTab({
+	Name = "Doors!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "RegularVynixu!",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+  	end    
+})
+
+--Tab 4
+
+local Tab = Window:MakeTab({
+	Name = "Admin!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "infiniteyield!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() --nice!--
+  	end    
+})
+
+--Tab 5 
+
+local Tab = Window:MakeTab({
+	Name = "Op Guis!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "V.G ScriptHub!",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "NukeVsCity!",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "lkhub!",
+	Callback = function()
+loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "unfairhub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "tnewman!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+  	end    
+})
+
+--tab 6
+
+local Tab = Window:MakeTab({
+	Name = "Fe ScriptHub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "DvrknvssHub!",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "SyntaxFEHub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Vallater/SyntaxFE/fbbffe71caabfa5341bb0e09865c0659574978e8/GG.txt'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pendulumhub!",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+  	end    
+})
+
+--Tab 7
