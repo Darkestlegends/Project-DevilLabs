@@ -141,3 +141,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hub
 })
 
 --Tab 7
+
+local Tab = Window:MakeTab({
+	Name = "TVL script!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "tnewman ScriptHub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+  	end    
+})
