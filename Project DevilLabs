@@ -8,6 +8,21 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
+--General
+
+local Tab = Window:MakeTab({
+	Name = "General!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "infiniteyield!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() --nice!--
+  	end    
+})
+
 --Tab 1
 
 local Tab = Window:MakeTab({
@@ -55,20 +70,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixiu
 
 --Tab 4
 
-local Tab = Window:MakeTab({
-	Name = "Admin!",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
-Tab:AddButton({
-	Name = "infiniteyield!",
-	Callback = function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() --nice!--
-  	end    
-})
 
 --Tab 5 
+
+Tab:AddButton({
+	Name = "tnewman ScriptHub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+  	end    
+})
 
 local Tab = Window:MakeTab({
 	Name = "Op Guis!",
@@ -109,6 +120,13 @@ Tab:AddButton({
 	Callback = function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
   	end    
+
+})
+Tab:AddButton({
+	Name = "VHub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
+  	end    
 })
 
 --tab 6
@@ -141,16 +159,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hub
 })
 
 --Tab 7
-
-local Tab = Window:MakeTab({
-	Name = "TVL script!",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "tnewman ScriptHub!",
-	Callback = function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
-  	end    
-})
