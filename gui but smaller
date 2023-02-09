@@ -1,1 +1,1 @@
-loadstring(game:https://raw.githubusercontent.com/Tajaewiner/gui/main/Darkest%20Legends%20Hub",true))();
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs'),true))()
