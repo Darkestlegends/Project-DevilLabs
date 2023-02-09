@@ -1,9 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Darkest Legends ScriptHub!", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Project-DevilLabs ScriptHub!", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Welcome!",
-	Content = "Notification content... Welcome to Darkest Legends ScriptHub!!",
+	Content = "Notification content... Welcome to Project-DevilLabs ScriptHub!!",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
