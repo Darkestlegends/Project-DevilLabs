@@ -1,13 +1,28 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Darkest Legends ScriptHub!", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+--Notifications
+
 OrionLib:MakeNotification({
 	Name = "Welcome!",
-	Content = "Notification content... Welcome to Darkest Legends ScriptHub!!",
+	Content = "This scripthub was encorged by some friends of mine.",
 	Image = "rbxassetid://4483345998",
-	Time = 5
+	Time = 10
 })
 
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "This was made posible by Dark legends#001 and thething45#6909",
+	Image = "rbxassetid://4483345998",
+	Time = 15
+})
+
+OrionLib:MakeNotification({
+	Name = "Exit!",
+	Content = "Enjoy",
+	Image = "rbxassetid://4483345998",
+	Time = 20
+})
 --General
 
 local Tab = Window:MakeTab({
@@ -74,19 +89,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixiu
 
 --Tab 5 
 
-Tab:AddButton({
-	Name = "tnewman ScriptHub!",
-	Callback = function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
-  	end    
-})
-
 local Tab = Window:MakeTab({
 	Name = "Op Guis!",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+Tab:AddButton({
+	Name = "tnewman ScriptHub!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+  	end    
+})
 Tab:AddButton({
 	Name = "V.G ScriptHub!",
 	Callback = function()
