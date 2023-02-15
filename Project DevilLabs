@@ -39,7 +39,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield
 })
 
 Tab:AddButton({
-	Name = "fatesc-esp!",
+	Name = "Esp and Aimbot!",
 	Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
   	end    
