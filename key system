@@ -8,10 +8,10 @@
 local keys = {
     ["DarkestLegends"] = true, -------------- Key 1
     ["BackUpKid"] = true, -------------- Key 2
-    ["20100815"] = true -------------- Key 3
-    ["KeyIsKey"] = true -------------- Key 4
-    ["EzKid"] = true -------------- Key 5
-    ["Admin"] = true -------------- Admin Password
+    ["20100815"] = true, -------------- Key 3
+    ["KeyIsKey"] = true, -------------- Key 4
+    ["EzKid"] = true, -------------- Key 5
+    ["Admin"] = true, -------------- Admin Password
 }
  
  
