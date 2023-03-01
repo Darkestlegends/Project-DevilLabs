@@ -1,4 +1,4 @@
--- Made by Matsu for Wizard Tycoon 2 Player
+-- Made by Dark Legends for Wizard Tycoon 2 Player
 
 --[[
 
@@ -35,7 +35,7 @@ Controls:
 -- Note1: I made it balanced but you can change the settings
 -- Note2: Sorry for my bad english :c
 
-local fps60 = false -- Change to true if your fps smaller or equals to 60
+local fps60 = true -- Change to true if your fps smaller or equals to 60
 local plrs = game:GetService('Players')
 local plr = plrs.LocalPlayer
 local CAS = game:GetService('ContextActionService')
@@ -48,13 +48,13 @@ local shoot1 = false
 local shoot2 = false
 local dash1 = false
 local damage = 0.2 -- Damage of leech
-local damage1 = 20 -- Damage of gatling
+local damage1 = 4 -- Damage of gatling
 local damage2 = 10 -- Damage of aura
 local damage3 = 400 --Damage of snipe shot
-local damage4 = 20 -- Damage of shot gun
-local damage6 = 30 -- Damage of six path
+local damage4 = 3 -- Damage of shot gun
+local damage6 = 5 -- Damage of six path
 local damage7 = 30 -- Damage of six path's splash
-local damage8 = 50 -- Damage of splash bullet
+local damage8 = 3 -- Damage of splash bullet
 local speed = 100 -- Speed of splash bullet
 local range = 120 -- Range of splash bullet
 local CD = 2 -- CD of snipe shot
@@ -66,12 +66,12 @@ local duration = 10000 -- Duration of strong mod
 local speed1 = 35 -- Move speed when using aura
 local jump = 70 -- Jump power when using aura
 local dashspeed = 1 -- Speed of dash
-local speed3 = 40
+local speed3 = 10
 local range3 = 40
 local OldHealth = plr.Character.Humanoid.Health
 
 if fps60 == true then
-    dashspeed = 4
+    dashspeed = 1
 end
 
 function holdAll(actionName, inputState, inputObject)
@@ -102,7 +102,7 @@ function forceField(actionName, inputState, inputObject)
     if inputState == Enum.UserInputState.Begin then
         if plr.Character:FindFirstChild('RemoveFF') ~= nil then
             game.StarterGui:SetCore('SendNotification', {
-                Title = 'No One Can Touch You!!';
+                Title = 'NO ONE WILL HURT YOU AGAIN';
                 Text = ''
             })
             plr.Character.RemoveFF:Destroy()
@@ -154,7 +154,7 @@ function adrenaline(actionName, inputState, inputObject)
     if inputState == Enum.UserInputState.Begin then
         if enabler1 == false then
             game.StarterGui:SetCore('SendNotification', {
-                Title = 'Your Rage Is Unstoppable!';
+                Title = 'NO ONE WILL HURT YOU AGAIN';
                 Text = ''
             })
             damage = damage * 2
@@ -207,7 +207,7 @@ function adrenaline(actionName, inputState, inputObject)
 
             if enabler2 == false and enabler1 == true then
                 game.StarterGui:SetCore('SendNotification', {
-                    Title = 'Adrenaline ended!';
+                    Title = 'You have been stopped:C';
                     Text = ''
                 })
                 damage = 0.05
