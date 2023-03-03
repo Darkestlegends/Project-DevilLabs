@@ -100,7 +100,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "tnewman!",
+	Name = "tnewman TVL!",
 	Callback = function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
   	end    
