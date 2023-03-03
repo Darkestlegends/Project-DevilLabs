@@ -33,7 +33,7 @@ local keys = {
  
                               ----- Script Here ------
  
- loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs'),true))()
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs?token=GHSAT0AAAAAAB7H3T7SHDZBKTKQD6YS2C7WZABQE4Q'),true))()
  
  
     ------------------------------- Extra Code -------------------
