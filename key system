@@ -11,7 +11,10 @@ local keys = {
     ["20100815"] = true, -------------- Key 3
     ["KeyIsKey"] = true, -------------- Key 4
     ["EzKid"] = true, -------------- Key 5
-    ["Admin"] = true, -------------- Admin Password
+    ["AdminsOnly"] = true, -------------- Admin Password
+    ["BroYouVip??"] = true, -------------- Key 6
+    ["HowIGetHere"] = true, -------------- Key 7
+    ["Bru"] = true, -------------- Key 8
 }
  
  
