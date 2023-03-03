@@ -12,7 +12,7 @@ OrionLib:MakeNotification({
 
 OrionLib:MakeNotification({
 	Name = "Welcome!",
-	Content = "This was made posible by Dark legends#0001 and thething45#6909",
+	Content = "This was made posible by Dark legends and thething45#6909",
 	Image = "rbxassetid://4483345998",
 	Time = 15
 })
@@ -92,7 +92,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixiu
 
 --Tab 4
 
+local Tab = Window:MakeTab({
+	Name = "TVL!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+Tab:AddButton({
+	Name = "tnewman!",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+  	end    
+})
 
 --Tab 5 
 
