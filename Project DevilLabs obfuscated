@@ -1,1 +1,1 @@
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/odfuscated'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/odfuscated?token=GHSAT0AAAAAAB7H3T7SCVJQ7DQGXEOMOHUGZABQTGA'),true))()
