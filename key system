@@ -3,18 +3,16 @@
  
 -------------------------- Keys
  
-  --------------------------- Current Key
+_G.Key = "AdminShallPass"  --------------------------- Current Key
  
 local keys = {
-    ["DarkestLegends"] = true, -------------- Key 1
-    ["BackUpKid"] = true, -------------- Key 2
-    ["20100815"] = true, -------------- Key 3
-    ["KeyIsKey"] = true, -------------- Key 4
-    ["EzKid"] = true, -------------- Key 5
-    ["AdminsOnly"] = true, -------------- Admin Password
-    ["BroYouVip??"] = true, -------------- Key 6
-    ["HowIGetHere"] = true, -------------- Key 7
-    ["Bru"] = true, -------------- Key 8
+    ["DarkestLegends"] = true,
+    ["KeyIsKey"] = true,
+    ["BroYouVip"] = true,
+    ["HowIGetHere"] = true,
+    ["EzKid"] = true,
+    ["20100815"] = true,
+    ["AdminShallPass"] = true, -- admin key
 }
  
  
@@ -34,7 +32,7 @@ local keys = {
                               ----- Script Here ------
  
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs'),true))()
- 
+
  
     ------------------------------- Extra Code -------------------
  
@@ -58,7 +56,7 @@ local keys = {
                 print("Argon Discord Copied To Clipboard!") --- Prints Copied Argon Hub Discord
                 Print("----- Made By Made By : cool cow / stick cow#5297 -----") --- Owner / Creator Of Script
                 -------------------------------------------------------
-                setclipboard("https://discord.gg/86Ux4cUE5R") ------ Copied Argon Hub Discord Server To Clipboard
+                setclipboard("https://discord.gg/qQT9n9S43b") ------ Copied Argon Hub Discord Server To Clipboard
                 ----------------------------------------------------------------------------------
             print("Successfully whitelisted!") ---- Printing Key Successfully Worked!
      ----------------------------------------------------------------------------------------       
