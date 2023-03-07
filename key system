@@ -3,7 +3,7 @@
  
 -------------------------- Keys
  
-_G.Key = "AdminShallPass"  --------------------------- Current Key
+--------------------------- Current Key
  
 local keys = {
     ["DarkestLegends"] = true,
