@@ -40,7 +40,7 @@ local keys = {
  
             game.StarterGui:SetCore("SendNotification", {
                 Title = "Creator"; -- the title (ofc)
-                Text = "Made By : cool cow / stick cow#5297"; -- what the text says (ofc)
+                Text = "Made By : Dark Legends / Dark Legends"; -- what the text says (ofc)
                 Icon = "http://www.roblox.com/asset/?id=8531473603"; -- the image if u want. 
                 Duration = 5; -- how long the notification should in secounds
                 })
@@ -54,9 +54,9 @@ local keys = {
                 ------------------------------------------
                 print("Successfully Loaded!") --- Succes Loaded Print
                 print("Argon Discord Copied To Clipboard!") --- Prints Copied Argon Hub Discord
-                Print("----- Made By Made By : cool cow / stick cow#5297 -----") --- Owner / Creator Of Script
+                Print("----- Made By : Dark Legends / Dark Legends -----") --- Owner / Creator Of Script
                 -------------------------------------------------------
-                setclipboard("https://discord.gg/qQT9n9S43b") ------ Copied Argon Hub Discord Server To Clipboard
+                setclipboard("https://discord.gg/T9d9Ucmqnt") ------ Copied Argon Hub Discord Server To Clipboard
                 ----------------------------------------------------------------------------------
             print("Successfully whitelisted!") ---- Printing Key Successfully Worked!
      ----------------------------------------------------------------------------------------       
