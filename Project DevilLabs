@@ -305,4 +305,28 @@
 	  	end    
 	})
 
+	elseif game.PlaceId == 527730528 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Magic Training", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Magic training",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "lucius!",
+		Callback = function()
+        loadstring(game:HttpGetAsync'https://lucius.pythonanywhere.com/script?raw=true')()
+	  	end    
+	})
+
 end
