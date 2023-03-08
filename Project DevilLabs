@@ -374,6 +374,31 @@
 		Name = "zenhub!",
 		Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/zenhub/main/script"))()
+
+	  	end    
+	})
+
+	elseif game.PlaceId == 893973440 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Flee The Facility", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Flee The Facility",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "V.G Hub!",
+		Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	  	end    
 	})
 
