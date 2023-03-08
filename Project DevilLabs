@@ -257,52 +257,52 @@
         end    
     })
 
-    elseif game.PlaceId == 286090429 then
-    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
-    local Window = OrionLib:MakeWindow({Name = "Slap battles", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	elseif game.PlaceId == 286090429 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Slap battles", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Arsenal",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "Owl Hub!",
+		Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	  	end    
+	})
 
-    local Tab = Window:MakeTab({
-        Name = "Arsenal",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
-    })
-
-    Tab:AddButton({
-        Name = "Delete gui!",
-        Callback = function()
-                OrionLib:Destroy()
-        end    
-    })
-
-    Tab:AddButton({
-        Name = "Owl Hub!",
-        Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-        end    
-    })
-
-    elseif game.PlaceId == 11156779721 then
-    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
-    local Window = OrionLib:MakeWindow({Name = "The Survival game", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
-    local Tab = Window:MakeTab({
-        Name = "The Survival game",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
-    })
-
-    Tab:AddButton({
-        Name = "Delete gui!",
-        Callback = function()
-                OrionLib:Destroy()
-        end    
-    })
-
-    Tab:AddButton({
-        Name = "joeengo!",
-        Callback = function()
-    loadstring(game:HttpGet("https://github.com/joeengo/exploiting/blob/main/tsg.lua?raw=true", true))()
-        end    
-    })
+	elseif game.PlaceId == 2753915549 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "BloxFruits", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "BloxFruits",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "Ultra stuff!",
+		Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
+	  	end    
+	})
 
 end
