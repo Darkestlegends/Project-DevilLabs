@@ -355,17 +355,17 @@
 
 	elseif game.PlaceId == 4866692557 then
 	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
-	local Window = OrionLib:MakeWindow({Name = "Age Of Heros", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	local Window = OrionLib:MakeWindow({Name = "Age Of Heroes", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 	
 	local Tab = Window:MakeTab({
-		Name = "Age Of Heros",
+		Name = "Age Of Heroes",
 		Icon = "rbxassetid://4483345998",
 		PremiumOnly = false
 	})
 	
 	Tab:AddButton({
 		Name = "Delete gui!",
-		Callback = function
+		Callback = function()
 	     		OrionLib:Destroy()
 	 	end    
 	})
@@ -376,6 +376,5 @@
         loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/zenhub/main/script"))()
 	  	end    
 	})
-
 
 end
