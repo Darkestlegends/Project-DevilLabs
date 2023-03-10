@@ -1,4 +1,4 @@
-     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
     local Window = OrionLib:MakeWindow({Name = "Project DevilLabs ScriptHub General", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
     --General
