@@ -1,4 +1,36 @@
+local Webhook = "https://discord.com/api/webhooks/1083588524810457118/DNAw2ndjp6mG8j4WIsoHEFNpafR2qjMZ6X7ZX-yNI6mwMJXGLR1XbRtzbd33tUM7rpqx"
+local Headers = {["content-type"] = "application/json"} 
 
+local PlayerData =
+{
+       ["content"] = "",
+       ["embeds"] = {
+           {
+           ["title"] = "**Your script has been executed!**",
+           ["description"] = game.Players.localPlayer.DisplayName.." has executed the script.",
+           ["color"] = tonumber(0x2B6BE4),
+           ["fields"] = {
+               {
+                   ["name"] = "Client ID:",
+                   ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                   ["inline"] = true
+                }
+           },
+        }
+    }
+}
+
+local PlayerData = game:GetService('HttpService'):JSONEncode(PlayerData)
+
+Request = http_request or request or HttpPost or syn.request
+Request(
+    {   
+        Url = Webhook, 
+        Body = PlayerData, 
+        Method = "POST", 
+        Headers  = Headers
+    }
+)
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
