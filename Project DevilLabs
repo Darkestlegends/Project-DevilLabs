@@ -1,6 +1,4 @@
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/key%20system'),true))()   
-   
-    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
     local Window = OrionLib:MakeWindow({Name = "Project DevilLabs ScriptHub General", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
     --General
@@ -282,14 +280,7 @@
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 	  	end    
 	})
-	
-	Tab:AddButton({
-		Name = "Dark Hub!",
-		Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub_V4/main/init", true))()
-	  	end    
-	})
-	
+
 	elseif game.PlaceId == 2753915549 then
 	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
 	local Window = OrionLib:MakeWindow({Name = "BloxFruits", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
