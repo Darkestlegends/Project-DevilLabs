@@ -1,4 +1,71 @@
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/key%20system'),true))()
+    --------------------- Key System V.04 --------------------------------------------------------
+ 
+ 
+-------------------------- Keys
+ 
+--------------------------- Current Key
+ 
+local keys = {
+    ["DarkestLegends"] = true,
+    ["KeyIsKey"] = true,
+    ["BroYouVip"] = true,
+    ["HowIGetHere"] = true,
+    ["EzKid"] = true,
+    ["20100815"] = true,
+    ["AdminShallPass"] = true, -- admin key
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+---------------------------
+ 
+------------------------------------------ Whitelisted Successfully Worked!
+        if keys[_G.Key] == true then
+ -------------------------------------------------------------------------------------------------           
+ 
+                              ----- Script Here ------
+ 
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs'),true))()
+
+ 
+    ------------------------------- Extra Code -------------------
+ 
+ 
+ 
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Creator"; -- the title (ofc)
+                Text = "Made By : Dark Legends / Dark Legends"; -- what the text says (ofc)
+                Icon = "http://www.roblox.com/asset/?id=8531473603"; -- the image if u want. 
+                Duration = 5; -- how long the notification should in secounds
+                })
+            ----------------------------------------------------------------------------------------
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = "Version"; -- the title (ofc)
+                    Text = "Key System V.04"; -- what the text says (ofc)
+                    Icon = "http://www.roblox.com/asset/?id=8531473603"; -- the image if u want. 
+                    Duration = 5; -- how long the notification should in secounds
+                    })
+                ------------------------------------------
+                print("Successfully Loaded!") --- Succes Loaded Print
+                print("Argon Discord Copied To Clipboard!") --- Prints Copied Argon Hub Discord
+                Print("----- Made By : Dark Legends / Dark Legends -----") --- Owner / Creator Of Script
+                -------------------------------------------------------
+                setclipboard("https://discord.gg/T9d9Ucmqnt") ------ Copied Argon Hub Discord Server To Clipboard
+                ----------------------------------------------------------------------------------
+            print("Successfully whitelisted!") ---- Printing Key Successfully Worked!
+     ----------------------------------------------------------------------------------------       
+ 
+--------------------------------------------------------------------------------------------------------- 
+                else
+                    print("Wrong Key Please Try Again!")
+        end
+-------------------------------------------------------------------------------------------------------------------------------
     
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
     local Window = OrionLib:MakeWindow({Name = "Project DevilLabs ScriptHub General", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
