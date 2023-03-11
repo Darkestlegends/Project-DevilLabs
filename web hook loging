@@ -1,4 +1,4 @@
-local Webhook = "https://discord.com/api/webhooks/1083588524810457118/DNAw2ndjp6mG8j4WIsoHEFNpafR2qjMZ6X7ZX-yNI6mwMJXGLR1XbRtzbd33tUM7rpqx"
+local Webhook = ""
 local Headers = {["content-type"] = "application/json"} 
 
 local PlayerData =
