@@ -1,0 +1,414 @@
+    
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "Project DevilLabs ScriptHub General", HidePremium = false, SaveConfig = true, 
+    ConfigFolder = "OrionTest"})
+
+    --General
+
+    local Tab = Window:MakeTab({
+        Name = "General!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "infiniteyield!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() --nice!--
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "Esp and Aimbot!",
+        Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
+        end    
+    })
+
+    local Tab = Window:MakeTab({
+        Name = "Op Guis!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "tnewman ScriptHub!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+        end    
+    })
+    Tab:AddButton({
+        Name = "V.G ScriptHub!",
+        Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "NukeVsCity!",
+        Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "lkhub!",
+        Callback = function()
+    loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+        end    
+    })
+
+
+
+    Tab:AddButton({
+        Name = "unfairhub!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+        end    
+    })
+    
+        Tab:AddButton({
+        Name = "Owl Hub!",
+        Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "tnewman!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+        end    
+
+    })
+    Tab:AddButton({
+        Name = "VHub!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
+        end    
+    })
+
+    local Tab = Window:MakeTab({
+    Name = "Fe ScriptHub",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "DvrknvssHub!",
+        Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "SyntaxFEHub!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Vallater/SyntaxFE/fbbffe71caabfa5341bb0e09865c0659574978e8/GG.txt'),true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "Pendulumhub!",
+        Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+        end    
+    })
+
+
+    if game.PlaceId == 6872274481 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local Window = OrionLib:MakeWindow({Name = "Bedwars", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Bedwars!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "VapeV4!",
+        Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+        end    
+    })
+    elseif game.PlaceId == 4282985734 then
+    local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/Ppzxw6mQ'),true))()
+    local Window = OrionLib:MakeWindow({Name = "Combat Warriors!", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Combat Warriors!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "projecthook!",
+        Callback = function()
+    loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
+        end    
+    })
+
+    elseif game.PlaceId == 4282985734 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local Window = OrionLib:MakeWindow({Name = "Doors", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Doors!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "RegularVynixu!",
+        Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+        end    
+    })
+
+    elseif game.PlaceId == 5194554335 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local Window = OrionLib:MakeWindow({Name = "TVL", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "The Vampire Legacies!",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "tnewman TVL!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+        end    
+    })
+
+    elseif game.PlaceId == 12062942034 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local Window = OrionLib:MakeWindow({Name = "Heroes: Online World", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Heroes: Online World",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "tnewman Heros!",
+        Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/tnewman-afk/scripthub/main/312.lua'),true))()
+        end    
+    })
+
+    elseif game.PlaceId == 6403373529 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+    local Window = OrionLib:MakeWindow({Name = "Slap battles", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Slap Battle",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Delete gui!",
+        Callback = function()
+                  OrionLib:Destroy()
+          end    
+    })
+
+    Tab:AddButton({
+        Name = " IKHUB!",
+        Callback = function()
+    loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+        end    
+    })
+
+	elseif game.PlaceId == 286090429 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Slap battles", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Arsenal",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "Owl Hub!",
+		Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	  	end    
+	})
+
+    Tab:AddButton({
+		Name = "Dark Hub!",
+		Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub_V4/main/init", true))()
+	  	end    
+	})
+
+	elseif game.PlaceId == 2753915549 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "BloxFruits", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "BloxFruits",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "Ultra stuff!",
+		Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
+	  	end    
+	})
+
+	elseif game.PlaceId == 527730528 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Magic Training", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Magic training",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "lucius!",
+		Callback = function()
+        loadstring(game:HttpGetAsync'https://lucius.pythonanywhere.com/script?raw=true')()
+	  	end    
+	})
+
+	elseif game.PlaceId == 8737602449 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Please Donate", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Please Donate",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "tzechco!",
+		Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/tzechco-PlsDonateAutofarmBackup/main/autofarm"))()
+	  	end    
+	})
+
+	elseif game.PlaceId == 4866692557 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Age Of Heroes", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Age Of Heroes",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "zenhub!",
+		Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/zenhub/main/script"))()
+
+	  	end    
+	})
+
+	elseif game.PlaceId == 893973440 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Flee The Facility", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Flee The Facility",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "V.G Hub!",
+		Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	  	end    
+	})
+
+end
