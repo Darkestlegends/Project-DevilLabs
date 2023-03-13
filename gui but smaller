@@ -1,7 +1,0 @@
-_G.Key = "Your Key"
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/odfuscated'),true))()
-
--------------------------------------------
-
-_G.Key = "Your Key"
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/Project%20DevilLabs'),true))()
