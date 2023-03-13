@@ -163,7 +163,7 @@
         end    
     })
 
-    elseif game.PlaceId == 4282985734 then
+    elseif game.PlaceId == 6839171747 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
     local Window = OrionLib:MakeWindow({Name = "Doors", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
@@ -187,7 +187,7 @@
         end    
     })
 
-    elseif game.PlaceId == 6839171747 then
+    elseif game.PlaceId == 5194554335 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
     local Window = OrionLib:MakeWindow({Name = "TVL", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
