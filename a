@@ -1,0 +1,43 @@
+local input
+local key = loadstring(game:HttpGet('https://pastebin.com/raw/7v1acrJE'))()
+
+
+function begin()
+    rconsoleprint('@@LIGHT_GREEN@@')
+    rconsolename("Project DevilLabs - Key System")
+    rconsoleclear()
+    rconsoleprint("--[Supported Games: https://pastebin.com/raw/HMJ54D2K]-- \n")
+    rconsoleprint("Key link: discord.gg/evPt75EJ8d \n")
+    rconsoleprint("Enter Key: ")
+    input = rconsoleinput()
+
+
+    if input == key then 
+       rconsoleprint("Correct Key! loading...")
+       wait(3)
+       rconsoleclear()
+       rconsoleprint('@@LIGHT_GREEN@@')
+       rconsolename("Project DevilLabs - Main Script has loaded")
+       rconsoleprint("Welcome Player Please do not close the console \n")
+       rconsoleprint("as it might close roblox and mess with your executor \n")
+       rconsoleprint("Project DevilLabs Will load in 5s \n")
+       wait(5)
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/odfuscated'),true))()
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/hehee/main/web%20hook%20correct'),true))()
+       rconsoleprint("Scripthub has loaded!/If not loaded please contact the owner on discord!")
+
+    elseif input ~= key then
+        rconsoleprint("@@RED@@")
+        rconsoleprint("Your key is incorret.")
+        rconsoleprint("Key link: discord.gg/evPt75EJ8d \n")
+        rconsolename("Wrong Key!")
+        wait(2)
+        rconsoleclear()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/hehee/main/web%20hook%20incorrect'),true))()
+
+        begin()
+    end
+end
+
+
+begin()
