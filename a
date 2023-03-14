@@ -26,11 +26,11 @@ function begin()
        wait(5)
        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/odfuscated'),true))()
        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/hehee/main/web%20hook%20correct'),true))()
-       rconsoleprint("Scripthub has loaded!/If not loaded please contact the owner on discord!")
+       rconsoleinfo("Scripthub has loaded!/If not loaded please contact the owner on discord!")
 
     elseif input ~= key then
         rconsoleprint("@@RED@@")
-        rconsoleprint("Your key is incorret.")
+        <void> printconsole("Your key was incorrect.")
         rconsoleprint("Key link: discord.gg/evPt75EJ8d \n")
         rconsolename("Wrong Key!")
         wait(2)
