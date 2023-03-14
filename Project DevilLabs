@@ -429,9 +429,9 @@
 	})
 	
 	Tab:AddButton({
-		Name = "psx-jmes!",
+		Name = "Milk up beta!",
 		Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a82cd5447cbbc4c7be0e8db405555787.lua"))()
 	  	end    
 	})
 	
