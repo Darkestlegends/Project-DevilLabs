@@ -30,7 +30,7 @@ function begin()
 
     elseif input ~= key then
         rconsoleprint("@@RED@@")
-        <void> printconsole("Your key was incorrect.")
+        printconsole("Your key was incorrect.")
         rconsoleprint("Key link: discord.gg/evPt75EJ8d \n")
         rconsolename("Wrong Key!")
         wait(2)
