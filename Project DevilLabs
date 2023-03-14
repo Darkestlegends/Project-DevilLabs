@@ -410,5 +410,30 @@
         loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	  	end    
 	})
+	
+	elseif game.PlaceId == 6284583030 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/Project-DevilLabs/main/orion%20config'),true))()
+	local Window = OrionLib:MakeWindow({Name = "Pet Sim X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	local Tab = Window:MakeTab({
+		Name = "Pet Sim X",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	
+	Tab:AddButton({
+		Name = "Delete gui!",
+		Callback = function()
+	     		OrionLib:Destroy()
+	 	end    
+	})
+	
+	Tab:AddButton({
+		Name = "psx-jmes!",
+		Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+	  	end    
+	})
+	
 
 end
