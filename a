@@ -30,13 +30,13 @@ function begin()
 
     elseif input ~= key then
         rconsoleprint("@@RED@@")
-        printconsole("Your key was incorrect.")
-        rconsoleprint("Key link: discord.gg/evPt75EJ8d \n")
-        rconsolename("Wrong Key!")
+        rconsoleprint("Checking key... \n")
         wait(2)
+        rconsoleprint("Incorrect Key! Please try again \n")
+        rconsoleprint("Key link: discord.gg/evPt75EJ8d")
+        wait(4)
         rconsoleclear()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Darkestlegends/hehee/main/web%20hook%20incorrect'),true))()
-
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Darkestlegends/hehee/main/web%20hook%20incorrect"))()
         begin()
     end
 end
